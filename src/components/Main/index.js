@@ -23,14 +23,20 @@ export default function MainPage() {
             <MoveBtn onClick={onClick} {...animationItem}>
                 둘러보기
             </MoveBtn>
+            <Space />
         </Background>
     )
 }
 
+const Space = styled.div`
+  min-width: 500px;
+  min-height: 200px;
+`
+
 const MoveBtn = styled.button`
   width: 192px;
   height: 72px;
-  background-color: #7B5EB4;
+  background-color: black;
   border-radius: 40px;
   border: none;
   font-size: 25px;
