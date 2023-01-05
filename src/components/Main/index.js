@@ -30,7 +30,7 @@ export default function MainPage() {
 
 const Space = styled.div`
   min-width: 500px;
-  min-height: 200px;
+  min-height: 100px;
 `
 
 const MoveBtn = styled.button`
