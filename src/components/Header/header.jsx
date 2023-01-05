@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import React from 'react';
 import { ReactComponent as MainLogo } from '../../assets/svgs/s_mainLogo.svg';
 import { ReactComponent as GameLogo } from '../../assets/svgs/gameLogo.svg';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -13,7 +14,9 @@ const Header = () => {
             </LogoContainer>
             <MenuContainer>
                 <ItemList>
-                    <Item>홈</Item>
+                    <Item>
+                        <LinkStyle to="/search">홈</LinkStyle>
+                    </Item>
                     <Item>매칭 생성</Item>
                     <Item>매칭</Item>
                     <Item>커뮤니티</Item>
@@ -26,6 +29,11 @@ const Header = () => {
         </>
     )
 }
+
+const LinkStyle = styled(Link)`
+    text-decoration: none;
+    color: black;
+`
 
 const LoginBtn = styled.button`
     width: 94px;
