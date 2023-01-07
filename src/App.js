@@ -2,7 +2,7 @@ import StyleProvider from "./styles";
 import { BrowserRouter } from "react-router-dom";
 import { Routes } from "react-router-dom";
 import { Route } from "react-router-dom";
-import MainPage from "./components/Main";
+import MainPage from './pages/Main';
 import SearchPage from "./pages/Search";
 
 const App = () => {
