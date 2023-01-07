@@ -43,6 +43,7 @@ const LoginBtn = styled.button`
     border: none;
     border-radius: 17px;
     font-size: 18px;
+    cursor: pointer;
 `
 
 const Item = styled.li`
