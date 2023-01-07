@@ -3,13 +3,20 @@ import React from 'react';
 import { ReactComponent as MainLogo } from '../../assets/svgs/s_mainLogo.svg';
 import { ReactComponent as GameLogo } from '../../assets/svgs/gameLogo.svg';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
+    const navigate = useNavigate();
+
+    const handleHomeClick = () => {
+        navigate('/')
+    }
+
     return (
         <>
           <HeaderContainer>
             <LogoContainer>
-                <MainLogoStyle />
+                <MainLogoStyle onClick={handleHomeClick}/>
                 <GameLogoStyle />
             </LogoContainer>
             <MenuContainer>
@@ -69,6 +76,7 @@ const GameLogoStyle = styled(GameLogo)`
 const MainLogoStyle = styled(MainLogo)`
     padding-left: 24px;
     padding-top: 15px;
+    cursor: pointer;
 `
 
 const LoginContainer = styled.div`
@@ -77,7 +85,7 @@ const LoginContainer = styled.div`
 `
 
 const MenuContainer = styled.div`
-  padding-top: 10px;
+  padding-top: 27px;
   padding-right: 200px;
 `
 
