@@ -33,15 +33,20 @@ const Header = () => {
         </MenuContainer>
         <LoginContainer>
           <LoginBtn
-          onClick={() => {setModalOpen(true)}}
+            onClick={() => {
+              setModalOpen(true);
+            }}
           >
             로그인
           </LoginBtn>
         </LoginContainer>
       </HeaderContainer>
-      <LoginModal open={modalOpen} close={() => {setModalOpen(false)}}>
-        Hello!!!
-      </LoginModal>
+      <LoginModal
+        open={modalOpen}
+        close={() => {
+          setModalOpen(false);
+        }}
+      />
     </>
   );
 };
