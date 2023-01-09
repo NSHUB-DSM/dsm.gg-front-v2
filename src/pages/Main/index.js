@@ -3,6 +3,7 @@ import styled, { keyframes } from 'styled-components';
 import { ReactComponent as MainLogo } from '../../assets/svgs/mainLogo.svg';
 import useScrollFadeIn from './hooks';
 import { useNavigate } from 'react-router-dom';
+import useTitle from '../../components/Title/hook';
 
 export default function MainPage() {
     const animationItem = useScrollFadeIn();
@@ -10,6 +11,9 @@ export default function MainPage() {
     const onClick = () => {
         navigate('/search');
     }
+
+    const titleUpdater = useTitle("불러오는 중...");
+    setTimeout(() => titleUpdater("DSM.GG"));
 
     return (
         <Background>
