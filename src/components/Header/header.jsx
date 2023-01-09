@@ -10,15 +10,15 @@ const Header = () => {
   const navigate = useNavigate();
   const [modalOpen, setModalOpen] = useState(false);
 
-  const handleHomeClick = () => {
-    navigate("/");
-  };
-
   return (
     <>
       <HeaderContainer>
         <LogoContainer>
-          <MainLogoStyle onClick={handleHomeClick} />
+          <MainLogoStyle
+            onClick={() => {
+              navigate("/");
+            }}
+          />
           <GameLogoStyle />
         </LogoContainer>
         <MenuContainer>
