@@ -27,7 +27,7 @@
   }
   .modal > section > header {
     position: relative;
-    padding: 16px 64px 16px 16px;
+    border: none;
     font-weight: 700;
   }
   .modal > section > header button {
@@ -43,24 +43,11 @@
   }
   .modal > section > main {
     padding: 16px;
-    border-bottom: 1px solid #dee2e6;
-    border-top: 1px solid #dee2e6;
   }
-  .modal > section > footer {
-    padding: 12px 16px;
-    text-align: right;
-  }
-  .modal > section > footer button {
-    padding: 6px 12px;
-    color: #fff;
-    background-color: #6c757d;
-    border-radius: 5px;
-    font-size: 13px;
-  }
+
   .modal.openModal {
     display: flex;
     align-items: center;
-    /* 팝업이 열릴때 스르륵 열리는 효과 */
     animation: modal-bg-show 0.3s;
   }
   @keyframes modal-show {
