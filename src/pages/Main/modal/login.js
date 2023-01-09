@@ -18,7 +18,7 @@ const LoginModal = (props) => {
             </button>
           </header>
           <main>
-            <Title>LOGIN</Title>
+            <Title>로그인</Title>
             <br />
             <LoginForm>
               <InputEmail placeholder="이메일을 입력해주세요." type="email" />
