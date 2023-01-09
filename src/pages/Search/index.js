@@ -10,23 +10,17 @@ export default function SearchPage() {
     setTimeout(() => titleUpdater("소환사 전적 검색 - DSM.GG"))
 
     return (
-        <Background>
+        <>
             <Header />
             <LogoStyle>
                 <img src={logo} alt="로고 이미지" />
             </LogoStyle>
             <Search />
-        </Background>
+        </>
     )
 }
 
 const LogoStyle = styled.div`
   margin-left: 607px;
   margin-top: 80px;
-`
-
-const Background = styled.div`
-  background-color: white;
-  width: 100vw;
-  height: 100vh;
 `
