@@ -3,6 +3,7 @@ import "../modal/modal.css";
 import styled from "styled-components";
 import emaliLogo from "../../../assets/imgs/email.png";
 import lock from "../../../assets/imgs/password.png";
+import { Link } from "react-router-dom";
 
 const LoginModal = (props) => {
   const { open, close, header } = props;
@@ -38,11 +39,28 @@ const LoginModal = (props) => {
               </LoginBtnContainer>
             </LoginForm>
           </main>
+          <LinkContainer>
+            <LinkStyle to="/user/signup">아직 회원이 아니신가요?</LinkStyle>
+          </LinkContainer>
         </section>
       ) : null}
     </div>
   );
 };
+
+const LinkContainer = styled.div`
+  margin-top: 40px;
+  margin-left: 350px;
+`
+
+const LinkStyle = styled(Link)`
+  font-size: 14px;
+  text-decoration: none;
+  color: #5A8FFF;
+  &:hover {
+    opacity: 0.8;
+  }
+`;
 
 const LoginBtnContainer = styled.div`
   width: 300px;
