@@ -9,7 +9,7 @@ const LoginModal = (props) => {
   const { open, close, header } = props;
 
   return (
-    <div className={open ? "openModal modal" : "modal"} onClick={close}>
+    <div className={open ? "openModal modal" : "modal"}>
       {open ? (
         <section>
           <header>
@@ -35,7 +35,7 @@ const LoginModal = (props) => {
                 <img src={lock} alt="이미지" />
               </LockLogoBox>
               <LoginBtnContainer>
-                <LoginBtn>로그인</LoginBtn>
+                <LoginBtns>로그인</LoginBtns>
               </LoginBtnContainer>
             </LoginForm>
           </main>
@@ -69,7 +69,7 @@ const LoginBtnContainer = styled.div`
   padding-top: 40px;
 `;
 
-const LoginBtn = styled.button`
+const LoginBtns = styled.button`
   width: 300px;
   height: 50px;
   background-color: black;
