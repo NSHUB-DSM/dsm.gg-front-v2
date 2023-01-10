@@ -62,7 +62,7 @@ const LinkStyle = styled(Link)`
   color: black;
   transition: color 0.5s ease-in-out;
   &:hover {
-    color: gray;
+    color: #B875E6;
   }
 `;
 
@@ -75,6 +75,12 @@ const LoginBtn = styled.button`
   border-radius: 17px;
   font-size: 18px;
   cursor: pointer;
+  transition: background-color 0.5s ease-in-out;
+  &:hover {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+  }
 `;
 
 const Item = styled.li`
