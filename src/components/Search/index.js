@@ -6,16 +6,22 @@ import { useState } from 'react';
 export default function Search() {
     return (
         <>
-          <SearchInput placeholder="소환사의 닉네임을 입력해주세요."/>
+          <InputContainer>
+            <SearchInput placeholder="소환사의 닉네임을 입력하세요." />
+          </InputContainer>
         </>
     )
 }
 
+const InputContainer = styled.div`
+  width: 660px;
+  height: 65px;
+  margin: 0 auto;
+`
+
 const SearchInput = styled.input`
   width: 660px;
   height: 65px;
-  margin-left: 500px;
-  margin-top: 50px;
   border: 1px solid #B2A1D4;
   border-radius: 7px;
   box-shadow: 1px 1px 1px gray;
