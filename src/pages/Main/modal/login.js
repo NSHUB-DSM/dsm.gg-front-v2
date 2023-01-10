@@ -9,7 +9,7 @@ const LoginModal = (props) => {
   const { open, close, header } = props;
 
   return (
-    <div className={open ? "openModal modal" : "modal"}>
+    <div className={open ? "openModal modal" : "modal"} onClick={close}>
       {open ? (
         <section>
           <header>
