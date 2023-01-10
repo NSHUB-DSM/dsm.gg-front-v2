@@ -12,15 +12,26 @@ export default function SearchPage() {
   return (
     <>
       <Header />
+      <TopSpace />
       <LogoStyle>
         <img src={logo} alt="로고 이미지" />
       </LogoStyle>
+      <Space />
       <Search />
     </>
   );
 }
 
+const TopSpace = styled.div`
+  height: 90px;
+`
+
+const Space = styled.div`
+  height: 120px;
+`
+
 const LogoStyle = styled.div`
-  margin-left: 607px;
-  margin-top: 80px;
+  width: 458px;
+  height: 168px;
+  margin: 0 auto;
 `;
