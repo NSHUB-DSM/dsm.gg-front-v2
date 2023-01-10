@@ -26,9 +26,15 @@ const Header = () => {
             <Item>
               <LinkStyle to="/search">홈</LinkStyle>
             </Item>
-            <Item>매칭 생성</Item>
-            <Item>매칭</Item>
-            <Item>커뮤니티</Item>
+            <Item>
+                <LinkStyle to="">매칭 생성</LinkStyle>
+            </Item>
+            <Item>
+                <LinkStyle to="">매칭</LinkStyle>
+            </Item>
+            <Item>
+                <LinkStyle to="">커뮤니티</LinkStyle>
+            </Item>
           </ItemList>
         </MenuContainer>
         <LoginContainer>
@@ -54,6 +60,10 @@ const Header = () => {
 const LinkStyle = styled(Link)`
   text-decoration: none;
   color: black;
+  transition: color 0.5s ease-in-out;
+  &:hover {
+    color: gray;
+  }
 `;
 
 const LoginBtn = styled.button`
