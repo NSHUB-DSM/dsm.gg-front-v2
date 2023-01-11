@@ -77,7 +77,7 @@ export default function SignupInput() {
   };
 
   const onSubmit = async () => {
-    if (!validation) {
+    if (!validation()) {
       return alert("회원가입에 실패하였습니다.");
     }
     await axios
@@ -147,7 +147,9 @@ export default function SignupInput() {
           <ErrorMessage>닉네임은 최대 7자까지 설정 가능합니다.</ErrorMessage>
         )}
         <Space />
-        <SignupBtn>회원가입</SignupBtn>
+        <SignupBtn type="submit" onClick={onSubmit}>
+          회원가입
+        </SignupBtn>
       </InputContainer>
     </>
   );
