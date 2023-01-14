@@ -33,7 +33,7 @@ const Header = () => {
                 <LinkStyle to="">매칭</LinkStyle>
             </Item>
             <Item>
-                <LinkStyle to="">커뮤니티</LinkStyle>
+                <LinkStyle to="/community">커뮤니티</LinkStyle>
             </Item>
           </ItemList>
         </MenuContainer>

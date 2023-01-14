@@ -5,6 +5,7 @@ import { Route } from "react-router-dom";
 import MainPage from './pages/Main';
 import SearchPage from "./pages/Search";
 import SignupPage from './pages/Signup';
+import Community from "./components/Community";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
           <Route path="/" element={<MainPage />}></Route>
           <Route path="/search" element={<SearchPage />}></Route>
           <Route path="/user/signup" element={<SignupPage />}></Route>
+          <Route path="/community" element={<Community />}></Route>
         </Routes>
       </BrowserRouter>
     </StyleProvider>
