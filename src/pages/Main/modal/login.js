@@ -4,9 +4,32 @@ import styled from "styled-components";
 import emaliLogo from "../../../assets/imgs/email.png";
 import lock from "../../../assets/imgs/password.png";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const LoginModal = (props) => {
   const { open, close, header } = props;
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
+  const onLogin = () => {
+    fetch("", {
+      method: "POST",
+      body: JSON.stringify({
+        email: email,
+        password: password,
+      }),
+    }).then((response) => {
+      if (response.message === "SUCCESS") {
+        window.localStorage.setItem("token", response.accessToken);
+        navigate("/search");
+      } else {
+        alert("아이디 및 비밀번호가 일치하지 않습니다.");
+      }
+    });
+  };
 
   return (
     <div className={open ? "openModal modal" : "modal"}>
@@ -22,7 +45,12 @@ const LoginModal = (props) => {
             <Title>로그인</Title>
             <br />
             <LoginForm>
-              <InputEmail placeholder="이메일을 입력해주세요." type="email" />
+              <InputEmail
+                placeholder="이메일을 입력해주세요."
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
               <EmailLogoBox>
                 <img src={emaliLogo} alt="이미지" />
               </EmailLogoBox>
@@ -30,12 +58,14 @@ const LoginModal = (props) => {
               <PasswordInput
                 placeholder="비밀번호를 입력해주세요."
                 type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
               <LockLogoBox>
                 <img src={lock} alt="이미지" />
               </LockLogoBox>
               <LoginBtnContainer>
-                <LoginBtns>로그인</LoginBtns>
+                <LoginBtns onClick={onLogin}>로그인</LoginBtns>
               </LoginBtnContainer>
             </LoginForm>
           </main>
@@ -51,12 +81,12 @@ const LoginModal = (props) => {
 const LinkContainer = styled.div`
   margin-top: 40px;
   margin-left: 350px;
-`
+`;
 
 const LinkStyle = styled(Link)`
   font-size: 14px;
   text-decoration: none;
-  color: #5A8FFF;
+  color: #5a8fff;
   &:hover {
     opacity: 0.8;
   }
