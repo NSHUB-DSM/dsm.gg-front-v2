@@ -5,7 +5,7 @@ import { Route } from "react-router-dom";
 import MainPage from './pages/Main';
 import SearchPage from "./pages/Search";
 import SignupPage from './pages/Signup';
-import Community from "./components/Community";
+import Community from './pages/Community';
 
 const App = () => {
   return (
