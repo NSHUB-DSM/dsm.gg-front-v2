@@ -1,4 +1,4 @@
-import Header from "../Header/header";
+import Header from '../../components/Header/header';
 import styled from "styled-components";
 
 const Community = () => {
