@@ -23,6 +23,7 @@ const Community = () => {
 
 export default Community;
 
+
 const CommunityContainer = styled.div`
   width: 100%;
 `;
@@ -37,7 +38,8 @@ const Left = styled.div`
 const Choice = styled.div`
   width: 330px;
   height: 500px;
-  border: 1px solid #000000;
+  border: 0.5px solid #C2C2C2;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 15%);
 `;
 
 const Right = styled.div`
