@@ -39,6 +39,7 @@ const CreateBtn = styled.button`
   font-weight: 600;
   border-radius: 25px;
   margin-top: -100px;
+  cursor: pointer;
 `
 
 const BottomSpace = styled.div`
