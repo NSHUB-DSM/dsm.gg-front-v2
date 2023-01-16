@@ -2,9 +2,12 @@ import styled, { keyframes } from "styled-components";
 import Header from "../../components/Header/header";
 import BackImage from '../../assets/svgs/back_image.svg';
 import useScrollFadeIn from "../Main/hooks";
+import useTitle from "../../components/Title/hook";
 
 export default function CreateMatch() {
   const animationItem = useScrollFadeIn();
+  const titleUpdater = useTitle("불러오는 중...")
+  setTimeout(() => titleUpdater("매칭 생성 - DSM.GG"))
 
   return (
     <>
