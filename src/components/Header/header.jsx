@@ -27,7 +27,7 @@ const Header = () => {
               <LinkStyle to="/search">홈</LinkStyle>
             </Item>
             <Item>
-                <LinkStyle to="">매칭 생성</LinkStyle>
+                <LinkStyle to="/match">매칭 생성</LinkStyle>
             </Item>
             <Item>
                 <LinkStyle to="">매칭</LinkStyle>
