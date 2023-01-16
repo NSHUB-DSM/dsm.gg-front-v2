@@ -11,9 +11,9 @@ const Community = () => {
         </Left>
         <Right>
           <CommunityHeader>
-            <p>전체</p>
-            <p>인기</p>
-            <p>최신</p>
+            <Item>전체</Item>
+            <Item>인기</Item>
+            <Item>최신</Item>
           </CommunityHeader>
         </Right>
       </CommunityContainer>
@@ -22,6 +22,14 @@ const Community = () => {
 };
 
 export default Community;
+
+const Item = styled.p`
+  cursor: pointer;
+  transition: color 0.5s ease-in-out;
+  &:hover {
+    color: black;
+  }
+`
 
 
 const CommunityContainer = styled.div`
