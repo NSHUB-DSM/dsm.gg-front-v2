@@ -5,22 +5,27 @@ import useScrollFadeIn from "../Main/hooks";
 import useTitle from "../../components/Title/hook";
 
 export default function CreateMatch() {
-  const animationItem = useScrollFadeIn();
   const titleUpdater = useTitle("불러오는 중...")
   setTimeout(() => titleUpdater("매칭 생성 - DSM.GG"))
 
   return (
     <>
       <Header />
-      <BackgroundImage {...animationItem}>
-        <img src={BackImage} alt="배경 이미지" />
-      </BackgroundImage>
+      <Space />
+      <div>
+        <Title>매칭을 만들어 소통해보세요!</Title>
+      </div>
     </>
   );
 }
 
-const BackgroundImage = styled.div`
-  width: 100%;
-  height: 100%;
-  transform: 0.5s ease-in-out;
+const Space = styled.div`
+  height: 250px;
+`
+
+const Title = styled.p`
+  font-size: 60px;
+  color: black;
+  text-align: center;
 `;
+
