@@ -61,11 +61,8 @@ const LinkStyle = styled(Link)`
   text-decoration: none;
   color: black;
   transition: color 0.5s ease-in-out;
-  transition: background-color 0.5s ease-in-out;
   &:hover {
     color: #B875E6;
-    background-color:rgba(0, 0, 0, 0.041);
-    border-radius: 5px;
   }
 `;
 
