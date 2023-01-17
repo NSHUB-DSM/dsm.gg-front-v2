@@ -1,8 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import Header from "../../Header/header";
+import useScrollFadeIn from "../../../pages/Main/hooks";
 
 const SelectOptions = () => {
+    const animationItem = useScrollFadeIn();
 
     return (
         <>
@@ -46,11 +48,36 @@ const SelectOptions = () => {
                     </PeopleChoice>
                 </div>
             </OptionsContainer>
+            <BottomSpace />
+            <BtnContainer {...animationItem}>
+                <MakeBtn>완료</MakeBtn>
+            </BtnContainer>
         </>
     )
 }
 
 export default SelectOptions;
+
+const BtnContainer = styled.div`
+  width: 160px;
+  height: 60px;
+  margin: 0 auto;
+`;
+
+const MakeBtn = styled.button`
+  width: 160px;
+  height: 60px;
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  border-radius: 25px;
+  margin-top: -100px;
+  cursor: pointer;
+`;
+
+const BottomSpace = styled.div`
+  height: 500px;
+`
 
 const TopSpace = styled.div`
   height: 200px;
