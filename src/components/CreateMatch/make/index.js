@@ -48,14 +48,16 @@ const SelectOptions = () => {
         <div>
           <GameTitle>게임 선택</GameTitle>
           <GameChoice
-            onChange={e => setSelected(e.target.value)}
+            onChange={(e) => setSelected(e.target.value)}
             value={selected}>
-            {gameList.map(item => (
+            {gameList.map((item) => (
               <option value={item.name} key={item.id}>
                 {item.name}
               </option>
             ))}
           </GameChoice>
+          <MiddleSpace />
+          {selected} 선택됨
         </div>
         <div>
           <TierTitle>티어 제한</TierTitle>
@@ -91,6 +93,14 @@ const SelectOptions = () => {
 };
 
 export default SelectOptions;
+
+const Red = styled.div`
+  color: red;
+`
+
+const MiddleSpace = styled.div`
+  height: 40px;
+`
 
 const BtnContainer = styled.div`
   width: 160px;
