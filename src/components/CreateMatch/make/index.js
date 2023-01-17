@@ -145,6 +145,10 @@ const SelectOptions = () => {
               </option>
             ))}
           </PeopleChoice>
+          <MiddleSpace />
+          <Selected>
+            {people}명 선택됨
+          </Selected>
         </div>
       </OptionsContainer>
       <BottomSpace />
@@ -156,6 +160,10 @@ const SelectOptions = () => {
 };
 
 export default SelectOptions;
+
+const Selected = styled.div`
+  margin-left: 10px;
+`
 
 const Red = styled.span`
   color: red;
@@ -200,6 +208,7 @@ const PeopleChoice = styled.select`
   margin-top: 21px;
   font-weight: 500;
   padding-left: 20px;
+  border: 1px solid #FDE747;
 `;
 
 const PeopleTitle = styled.p`
@@ -217,6 +226,7 @@ const TierChoice = styled.select`
   font-weight: 500;
   margin-left: 10px;
   padding-left: 10px;
+  border: 2px solid red;
 `;
 
 const TierTitle = styled.p`
@@ -233,6 +243,7 @@ const GameChoice = styled.select`
   width: 96px;
   height: 32px;
   background-color: #f8f8f8;
+  border: 2px solid #95FF42;
   box-shadow: rgb(0 0 0 / 5%) 0px 0px 4px;
   margin-top: 21px;
   font-weight: 500;
