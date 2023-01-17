@@ -78,6 +78,29 @@ const SelectOptions = () => {
     },
   ];
 
+  const peopleNumber = [
+    {
+      id: 0,
+      number: 1,
+    },
+    {
+      id: 1,
+      number: 2,
+    },
+    {
+      id: 2,
+      number: 3,
+    },
+    {
+      id: 3,
+      number: 4,
+    },
+    {
+      id: 4,
+      number: 5,
+    },
+  ];
+
   const [game, setGame] = useState("");
   const [tier, setTier] = useState("");
   const [people, setPeople] = useState(0);
@@ -88,10 +111,7 @@ const SelectOptions = () => {
       <OptionsContainer>
         <div>
           <GameTitle>게임 선택</GameTitle>
-          <GameChoice
-            onChange={(e) => setGame(e.target.value)}
-            value={game}
-          >
+          <GameChoice onChange={(e) => setGame(e.target.value)} value={game}>
             {gameList.map((item) => (
               <option value={item.name} key={item.id}>
                 {item.name}
@@ -103,10 +123,7 @@ const SelectOptions = () => {
         </div>
         <div>
           <TierTitle>티어 제한</TierTitle>
-          <TierChoice
-            onChange={(e) => setTier(e.target.value)}
-            value={tier}
-          >
+          <TierChoice onChange={(e) => setTier(e.target.value)} value={tier}>
             {tierList.map((item) => (
               <option value={item.tier} key={item.id}>
                 {item.tier}
@@ -118,12 +135,15 @@ const SelectOptions = () => {
         </div>
         <div>
           <PeopleTitle>인원</PeopleTitle>
-          <PeopleChoice>
-            <option>1명</option>
-            <option>2명</option>
-            <option>3명</option>
-            <option>4명</option>
-            <option>5명</option>
+          <PeopleChoice
+            onChange={(e) => setPeople(e.target.value)}
+            value={people}
+          >
+            {peopleNumber.map((item) => (
+              <option value={item.number} key={item.id}>
+                {item.number}
+              </option>
+            ))}
           </PeopleChoice>
         </div>
       </OptionsContainer>
