@@ -63,11 +63,13 @@ const PeopleChoice = styled.select`
   box-shadow: rgb(0 0 0 / 5%) 0px 0px 4px;
   margin-top: 21px;
   font-weight: 500;
+  padding-left: 20px;
 `;
 
 const PeopleTitle = styled.p`
   font-size: 30px;
   font-weight: 600;
+  padding-left: 10px;
 `;
 
 const TierChoice = styled.select`
@@ -77,6 +79,8 @@ const TierChoice = styled.select`
   box-shadow: rgb(0 0 0 / 5%) 0px 0px 4px;
   margin-top: 21px;
   font-weight: 500;
+  margin-left: 10px;
+  padding-left: 10px;
 `;
 
 const TierTitle = styled.p`
@@ -96,6 +100,8 @@ const GameChoice = styled.select`
   box-shadow: rgb(0 0 0 / 5%) 0px 0px 4px;
   margin-top: 21px;
   font-weight: 500;
+  margin-left: 10px;
+  padding-left: 10px;
 `;
 
 const OptionsContainer = styled.div`
