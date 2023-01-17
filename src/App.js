@@ -7,6 +7,7 @@ import SearchPage from "./pages/Search";
 import SignupPage from './pages/Signup';
 import Community from './pages/Community';
 import CreateMatch from "./pages/CreateMatch";
+import Make from "./pages/CreateMatch/make";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/user/signup" element={<SignupPage />}></Route>
           <Route path="/community" element={<Community />}></Route>
           <Route path="/match" element={<CreateMatch />}></Route>
+          <Route path="/match/create" element={<Make />}></Route>
         </Routes>
       </BrowserRouter>
     </StyleProvider>
