@@ -1,6 +1,5 @@
 import styled, { keyframes } from "styled-components";
 import Header from "../../components/Header/header";
-import BackImage from '../../assets/svgs/back_image.svg';
 import useScrollFadeIn from "../Main/hooks";
 import useTitle from "../../components/Title/hook";
 import { useNavigate } from "react-router-dom";
