@@ -6,6 +6,7 @@ const SelectOptions = () => {
 
     return (
         <>
+            <TopSpace />
             <OptionsContainer>
                 <div>
                     <GameTitle>게임 선택</GameTitle>
@@ -51,6 +52,10 @@ const SelectOptions = () => {
 
 export default SelectOptions;
 
+const TopSpace = styled.div`
+  height: 200px;
+`
+
 const PeopleChoice = styled.select`
   width: 96px;
   height: 32px;
@@ -94,5 +99,6 @@ const GameChoice = styled.select`
 `;
 
 const OptionsContainer = styled.div`
-  
+  display: flex;
+  justify-content: space-evenly;
 `
