@@ -39,7 +39,48 @@ const SelectOptions = () => {
     },
   ];
 
-  const [selected, setSelected] = useState("");
+  const tierList = [
+    {
+      id: 0,
+      tier: "아이언",
+    },
+    {
+      id: 1,
+      tier: "브론즈",
+    },
+    {
+      id: 2,
+      tier: "실버",
+    },
+    {
+      id: 3,
+      tier: "골드",
+    },
+    {
+      id: 4,
+      tier: "플래티넘",
+    },
+    {
+      id: 5,
+      tier: "다이아몬드",
+    },
+    {
+      id: 6,
+      tier: "마스터",
+    },
+    {
+      id: 7,
+      tier: "그랜드마스터",
+    },
+    {
+      id: 8,
+      tier: "챌린저",
+    },
+  ];
+
+  const [game, setGame] = useState("");
+  const [tier, setTier] = useState("");
+  const [people, setPeople] = useState(0);
 
   return (
     <>
@@ -48,8 +89,9 @@ const SelectOptions = () => {
         <div>
           <GameTitle>게임 선택</GameTitle>
           <GameChoice
-            onChange={(e) => setSelected(e.target.value)}
-            value={selected}>
+            onChange={(e) => setGame(e.target.value)}
+            value={game}
+          >
             {gameList.map((item) => (
               <option value={item.name} key={item.id}>
                 {item.name}
@@ -57,21 +99,22 @@ const SelectOptions = () => {
             ))}
           </GameChoice>
           <MiddleSpace />
-          {selected} 선택됨
+          {game} 선택됨
         </div>
         <div>
           <TierTitle>티어 제한</TierTitle>
-          <TierChoice>
-            <option>아이언</option>
-            <option>브론즈</option>
-            <option>실버</option>
-            <option>골드</option>
-            <option>플래티넘</option>
-            <option>다이아몬드</option>
-            <option>마스터</option>
-            <option>그랜드마스터</option>
-            <option>챌린저</option>
+          <TierChoice
+            onChange={(e) => setTier(e.target.value)}
+            value={tier}
+          >
+            {tierList.map((item) => (
+              <option value={item.tier} key={item.id}>
+                {item.tier}
+              </option>
+            ))}
           </TierChoice>
+          <MiddleSpace />
+          <Red>{tier}</Red> 제한
         </div>
         <div>
           <PeopleTitle>인원</PeopleTitle>
@@ -94,13 +137,15 @@ const SelectOptions = () => {
 
 export default SelectOptions;
 
-const Red = styled.div`
+const Red = styled.span`
   color: red;
-`
+  margin-left: 20px;
+  margin-right: 5px;
+`;
 
 const MiddleSpace = styled.div`
   height: 40px;
-`
+`;
 
 const BtnContainer = styled.div`
   width: 160px;
