@@ -89,7 +89,7 @@ export default function SignupInput() {
       .then(function (response) {
         if (response.data.code === 0) {
           alert("회원가입이 완료되었습니다!");
-          navigate("/");
+          navigate("/search");
         } else {
           if (response.data.code === 10000) {
             alert("중복된 닉네임입니다. 다른 닉네임으로 시도해주세요.");
