@@ -1,9 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import useScrollFadeIn from "../../../pages/Main/hooks";
 
 const SelectOptions = () => {
     const animationItem = useScrollFadeIn();
+    const gameList = [
+        {
+            id: 0,
+            name: '일반 게임'
+        },
+        {
+            id: 1,
+            name: '개인/2인 랭크 게임',
+        },
+        {
+            id: 2,
+            name: '자유 랭크 게임'
+        },
+        {
+            id: 3,
+            name: '칼바람 나락'
+        },
+        {
+            id: 4,
+            name: '롤토체스'
+        },
+        {
+            id: 5,
+            name: '우르프'
+        },
+        {
+            id: 6,
+            name: '단일 챔피언'
+        },
+        {
+            id: 7,
+            name: '궁극기 주문서'
+        }
+    ]
 
     return (
         <>
