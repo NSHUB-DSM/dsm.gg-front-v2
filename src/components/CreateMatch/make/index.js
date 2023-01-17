@@ -37,7 +37,9 @@ const SelectOptions = () => {
             id: 7,
             name: '궁극기 주문서'
         }
-    ]
+    ];
+
+    const [selected, setSelected] = useState("");
 
     return (
         <>
@@ -45,15 +47,12 @@ const SelectOptions = () => {
             <OptionsContainer>
                 <div>
                     <GameTitle>게임 선택</GameTitle>
-                    <GameChoice>
-                        <option>일반 게임</option>
-                        <option>개인/2인 랭크 게임</option>
-                        <option>자유 랭크 게임</option>
-                        <option>칼바람 나락</option>
-                        <option>롤토체스</option>
-                        <option>우르프</option>
-                        <option>단일 챔피언</option>
-                        <option>궁극기 주문서</option>
+                    <GameChoice onChange={(e) => setSelected(e.target.value)} value={selected}>
+                        {gameList.map((item) => (
+                            <option value={item.name} key={item.id}>
+                                {item.name}
+                            </option>
+                        ))}
                     </GameChoice>
                 </div>
                 <div>
