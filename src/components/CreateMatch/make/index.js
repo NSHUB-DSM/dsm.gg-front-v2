@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Header from "../../Header/header";
 import useScrollFadeIn from "../../../pages/Main/hooks";
 
 const SelectOptions = () => {
