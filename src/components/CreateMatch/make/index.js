@@ -25,8 +25,24 @@ const SelectOptions = () => {
                     <TierChoice>
                         <option>아이언</option>
                         <option>브론즈</option>
-                        <optgroup>실버</optgroup>
+                        <option>실버</option>
+                        <option>골드</option>
+                        <option>플래티넘</option>
+                        <option>다이아몬드</option>
+                        <option>마스터</option>
+                        <option>그랜드마스터</option>
+                        <option>챌린저</option>
                     </TierChoice>
+                </div>
+                <div>
+                    <PeopleTitle>인원</PeopleTitle>
+                    <PeopleChoice>
+                        <option>1명</option>
+                        <option>2명</option>
+                        <option>3명</option>
+                        <option>4명</option>
+                        <option>5명</option>
+                    </PeopleChoice>
                 </div>
             </OptionsContainer>
         </>
@@ -34,6 +50,20 @@ const SelectOptions = () => {
 }
 
 export default SelectOptions;
+
+const PeopleChoice = styled.select`
+  width: 96px;
+  height: 32px;
+  background-color: #f8f8f8;
+  box-shadow: rgb(0 0 0 / 5%) 0px 0px 4px;
+  margin-top: 21px;
+  font-weight: 500;
+`;
+
+const PeopleTitle = styled.p`
+  font-size: 30px;
+  font-weight: 600;
+`;
 
 const TierChoice = styled.select`
   width: 96px;
