@@ -227,6 +227,7 @@ const TierChoice = styled.select`
   margin-left: 10px;
   padding-left: 10px;
   border: 0.5px solid red;
+  border-radius: 5px;
 `;
 
 const TierTitle = styled.p`
