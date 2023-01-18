@@ -209,6 +209,7 @@ const PeopleChoice = styled.select`
   font-weight: 500;
   padding-left: 20px;
   border: 0.5px solid #FDE747;
+  border-radius: 5px;
 `;
 
 const PeopleTitle = styled.p`
