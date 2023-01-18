@@ -218,13 +218,12 @@ const PeopleTitle = styled.p`
 `;
 
 const TierChoice = styled.select`
-  width: 96px;
-  height: 32px;
+  width: 150px;
+  height: 40px;
   background-color: #f8f8f8;
   box-shadow: rgb(0 0 0 / 5%) 0px 0px 4px;
   margin-top: 21px;
   font-weight: 500;
-  margin-left: 10px;
   padding-left: 10px;
   border: 0.5px solid red;
   border-radius: 5px;
