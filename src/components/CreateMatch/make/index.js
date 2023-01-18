@@ -240,15 +240,16 @@ const GameTitle = styled.p`
 `;
 
 const GameChoice = styled.select`
-  width: 96px;
-  height: 32px;
+  width: 150px;
+  height: 40px;
   background-color: #f8f8f8;
   border: 0.5px solid #95FF42;
   box-shadow: rgb(0 0 0 / 5%) 0px 0px 4px;
   margin-top: 21px;
   font-weight: 500;
-  margin-left: 10px;
+  margin-right: 5px;
   padding-left: 10px;
+  border-radius: 5px;
 `;
 
 const OptionsContainer = styled.div`
