@@ -242,7 +242,7 @@ const GameTitle = styled.p`
 `;
 
 const GameChoice = styled.select`
-  width: 150px;
+  width: 145px;
   height: 40px;
   background-color: #f8f8f8;
   border: 0.5px solid #95FF42;
