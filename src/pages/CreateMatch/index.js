@@ -3,6 +3,7 @@ import Header from "../../components/Header/header";
 import useScrollFadeIn from "../Main/hooks";
 import useTitle from "../../components/Title/hook";
 import { useNavigate } from "react-router-dom";
+import { createGlobalStyle } from "styled-components";
 
 export default function CreateMatch() {
   const animationItem = useScrollFadeIn();
@@ -24,6 +25,7 @@ export default function CreateMatch() {
     </>
   );
 }
+
 
 const BtnContainer = styled.div`
   width: 160px;
