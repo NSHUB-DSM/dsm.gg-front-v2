@@ -209,7 +209,7 @@ const PeopleChoice = styled.select`
   font-weight: 500;
   padding-left: 10px;
   margin-left: 10px;
-  border: 0.5px solid #FDE747;
+  border: 0.5px solid #808B96;
   border-radius: 5px;
 `;
 
