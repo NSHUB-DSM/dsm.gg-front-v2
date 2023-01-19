@@ -1,7 +1,11 @@
 import Header from '../../components/Header/header';
 import styled from "styled-components";
+import useTitle from '../../components/Title/hook';
 
 const Community = () => {
+  const titleUpdater = useTitle("불러오는 중...");
+  setTimeout(() => titleUpdater("커뮤니티 | DSM.GG"))
+
   return (
     <>
       <Header></Header>
