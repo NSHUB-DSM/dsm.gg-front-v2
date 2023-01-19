@@ -147,7 +147,7 @@ const SelectOptions = () => {
           </PeopleChoice>
           <MiddleSpace />
           <Selected>
-            {people}명 선택됨
+            총원 {people}명
           </Selected>
         </div>
       </OptionsContainer>
