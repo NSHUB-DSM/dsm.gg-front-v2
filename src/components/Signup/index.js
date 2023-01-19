@@ -56,6 +56,7 @@ export default function SignupInput() {
   };
 
   const validation = () => {
+
     if (!email) {
       setEmailError(true);
     }
