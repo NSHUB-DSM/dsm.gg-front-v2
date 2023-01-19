@@ -5,14 +5,13 @@ import { useState } from "react";
 export default function Search() {
   return (
     <>
-      <div>
-        <InputContainer>
-          <SearchInput placeholder="소환사의 닉네임을 입력하세요." />
-        </InputContainer>
-      </div>
+      <InputContainer>
+        <SearchInput placeholder="소환사의 닉네임을 입력하세요." />
+      </InputContainer>
     </>
   );
 }
+
 
 const InputContainer = styled.div`
   width: 660px;
