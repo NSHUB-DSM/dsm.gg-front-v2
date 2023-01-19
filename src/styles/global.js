@@ -9,6 +9,9 @@ const GlobalStyle = createGlobalStyle`
         border: 0;
     }
 
+    ::-webkit-scrollbar {
+        display: none;
+    }
 
 `;
 
