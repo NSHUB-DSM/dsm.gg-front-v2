@@ -7,7 +7,7 @@ import useTitle from "../../components/Title/hook";
 
 export default function SearchPage() {
   const titleUpdater = useTitle("불러오는 중...");
-  setTimeout(() => titleUpdater("소환사 전적 검색 - DSM.GG"));
+  setTimeout(() => titleUpdater("소환사 전적 검색 | DSM.GG"));
 
   return (
     <>
