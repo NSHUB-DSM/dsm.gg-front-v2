@@ -31,14 +31,14 @@ export default function Search() {
 
 const SearchBtn = styled.p`
   font-size: 15px;
-  color: #D3D3D3;
+  color: black;
   font-weight: 550;
   text-align: right;
   margin-top: 5px;
   cursor: pointer;
-  transition: color 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
   &:hover {
-    color: black;
+    opacity: 0.7;
   }
 `;
 
