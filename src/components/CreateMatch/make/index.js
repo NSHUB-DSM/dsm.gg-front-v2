@@ -101,6 +101,8 @@ const SelectOptions = () => {
     },
   ];
 
+  
+
   const [game, setGame] = useState("");
   const [tier, setTier] = useState("");
   const [people, setPeople] = useState(0);
@@ -197,7 +199,7 @@ const BottomSpace = styled.div`
 `;
 
 const TopSpace = styled.div`
-  height: 200px;
+  height: 280px;
 `;
 
 const PeopleChoice = styled.select`
