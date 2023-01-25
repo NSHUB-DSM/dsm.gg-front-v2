@@ -183,9 +183,9 @@ const NicknameInput = styled.input`
   height: 40px;
   border-bottom: 1px solid #E5E7E9;
   font-size: 17px;
-  transition: border-bottom 0.6s ease;
+  transition: border-bottom 0s ease;
   &:focus {
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid black;
   }
 `;
 
@@ -194,9 +194,9 @@ const ConfirmPassInput = styled.input`
   height: 40px;
   border-bottom: 1px solid #E5E7E9;
   font-size: 17px;
-  transition: border-bottom 0.6s ease;
+  transition: border-bottom 0s ease;
   &:focus {
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid black;
   }
 `;
 
@@ -205,9 +205,9 @@ const PasswordInput = styled.input`
   height: 40px;
   border-bottom: 1px solid #E5E7E9;
   font-size: 17px;
-  transition: border-bottom 0.6s ease;
+  transition: border-bottom 0s ease;
   &:focus {
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid black;
   }
 `;
 
@@ -216,9 +216,9 @@ const EamilInput = styled.input`
   height: 40px;
   border-bottom: 1px solid #E5E7E9;
   font-size: 17px;
-  transition: border-bottom 0.6s ease;
+  transition: border-bottom 0s ease;
   &:focus {
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid black;
   }
 `;
 
