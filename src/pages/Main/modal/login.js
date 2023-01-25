@@ -128,11 +128,15 @@ const LockLogoBox = styled.div`
 const PasswordInput = styled.input`
   width: 300px;
   height: 40px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #E5E7E9;
   margin-left: 260px;
   padding-left: 40px;
   padding-top: 10px;
   margin-top: 20px;
+  transition: border-bottom 1s ease;
+  &:focus {
+    border-bottom: 1px solid black;
+  }
 `;
 
 const EmailLogoBox = styled.div`
