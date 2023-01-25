@@ -181,29 +181,45 @@ const ErrorMessage = styled.p`
 const NicknameInput = styled.input`
   width: 300px;
   height: 40px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #E5E7E9;
   font-size: 17px;
+  transition: border-bottom 0.6s ease;
+  &:focus {
+    border-bottom: 1px solid black;
+  }
 `;
 
 const ConfirmPassInput = styled.input`
   width: 300px;
   height: 40px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #E5E7E9;
   font-size: 17px;
+  transition: border-bottom 0.6s ease;
+  &:focus {
+    border-bottom: 1px solid black;
+  }
 `;
 
 const PasswordInput = styled.input`
   width: 300px;
   height: 40px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #E5E7E9;
   font-size: 17px;
+  transition: border-bottom 0.6s ease;
+  &:focus {
+    border-bottom: 1px solid black;
+  }
 `;
 
 const EamilInput = styled.input`
   width: 300px;
   height: 40px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #E5E7E9;
   font-size: 17px;
+  transition: border-bottom 0.6s ease;
+  &:focus {
+    border-bottom: 1px solid black;
+  }
 `;
 
 const Space = styled.div`
