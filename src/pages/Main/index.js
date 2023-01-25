@@ -16,7 +16,7 @@ export default function MainPage() {
     <Background>
       <MainLogoStyle />
       <TextStyle>
-        <p>게임</p>
+        <p>LoL</p>
         <p className="purple">전적 검색</p>
         <p className="purple">실시간</p>
         <p>매칭 서비스</p>
