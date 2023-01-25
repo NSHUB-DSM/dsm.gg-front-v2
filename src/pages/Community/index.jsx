@@ -17,7 +17,7 @@ const Community = () => {
           <CommunityHeader>
             <Item>전체</Item>
             <Item>인기</Item>
-            <Item>최신</Item>
+            <Item>최신글</Item>
           </CommunityHeader>
         </Right>
       </CommunityContainer>
