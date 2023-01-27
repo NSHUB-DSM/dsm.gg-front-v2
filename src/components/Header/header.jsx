@@ -30,7 +30,7 @@ const Header = () => {
                 <LinkStyle to="/match">매칭 생성</LinkStyle>
             </Item>
             <Item>
-                <LinkStyle to="">매칭</LinkStyle>
+                <LinkStyle to="/matching">매칭</LinkStyle>
             </Item>
             <Item>
                 <LinkStyle to="/community">커뮤니티</LinkStyle>
