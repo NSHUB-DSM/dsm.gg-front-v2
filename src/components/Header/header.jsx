@@ -123,7 +123,7 @@ const LogoContainer = styled.div``;
 
 const HeaderContainer = styled.nav`
   width: 100vw;
-  height: 122px;
+  height: 100px;
   display: flex;
   justify-content: space-between;
 
