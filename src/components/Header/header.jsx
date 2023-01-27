@@ -126,6 +126,7 @@ const HeaderContainer = styled.nav`
   height: 100px;
   display: flex;
   justify-content: space-between;
+  border-bottom: 0.8px solid black;
 
   @media screen and (max-width: 600px) {
     flex-direction: column;
