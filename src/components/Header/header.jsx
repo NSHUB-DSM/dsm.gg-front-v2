@@ -101,6 +101,7 @@ const ItemList = styled.ul`
 const GameLogoStyle = styled(GameLogo)`
   margin-left: 51px;
   margin-bottom: -3px;
+  padding-top: 10px;
 `;
 
 const MainLogoStyle = styled(MainLogo)`
