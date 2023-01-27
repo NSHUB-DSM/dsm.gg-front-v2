@@ -91,5 +91,5 @@ const CommunityHeader = styled.div`
     color: #a7a7a7;
     margin-left: 40px;
   }
-  
+  margin-top: 57px;
 `;
