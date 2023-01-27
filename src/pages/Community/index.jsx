@@ -71,6 +71,7 @@ const Choice = styled.div`
   height: 500px;
   border: 0.5px solid #c2c2c2;
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 15%);
+  margin-top: 57px;
 `;
 
 const Right = styled.div`
@@ -90,4 +91,5 @@ const CommunityHeader = styled.div`
     color: #a7a7a7;
     margin-left: 40px;
   }
+  
 `;
