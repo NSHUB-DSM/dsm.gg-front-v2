@@ -81,6 +81,7 @@ const LoginBtn = styled.button`
     border: 1px solid black;
     color: black;
   }
+  margin-top: 5px;
 `;
 
 const Item = styled.li`
