@@ -6,7 +6,7 @@ import useTitle from '../../components/Title/hook';
 
 export default function SignupPage() {
     const titleUpdater = useTitle("불러오는 중...");
-    setTimeout(() => titleUpdater("회원가입 - DSM.GG"));
+    setTimeout(() => titleUpdater("회원가입 | DSM.GG"));
 
     return (
         <>
