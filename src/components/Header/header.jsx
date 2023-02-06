@@ -9,7 +9,6 @@ import LoginModal from "../../pages/Main/modal/login";
 const Header = () => {
   const navigate = useNavigate();
   const [modalOpen, setModalOpen] = useState(false);
-  const [isInput, setIsInput] = useState(false);
 
   return (
     <>
