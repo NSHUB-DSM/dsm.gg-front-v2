@@ -95,6 +95,7 @@ const ItemList = styled.ul`
   list-style: none;
   padding-left: 0;
   margin-right: 30px;
+  margin-top: 3px;
 
   @media screen and (max-width: 600px) {
     flex-direction: column;
