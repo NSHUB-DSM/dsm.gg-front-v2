@@ -79,6 +79,10 @@ export default function SignupInput() {
   };
 
   const onSubmit = async () => {
+    setEmail("");
+    setPassword("");
+    setConfirmPassword("");
+    setUsername("");
     if (!validation()) {
       return alert("회원가입에 실패하였습니다.");
     }
@@ -157,7 +161,7 @@ export default function SignupInput() {
           <ErrorMessage>닉네임은 최대 7자까지 설정 가능합니다.</ErrorMessage>
         )}
         <Space />
-        <SignupBtn type="submit" onClick={onSubmit}>
+        <SignupBtn type="submit" onClick={onSubmit} isInput={isInput}>
           회원가입
         </SignupBtn>
       </InputContainer>
@@ -180,6 +184,7 @@ const SignupBtn = styled.button`
     border: 1px solid black;
     color: black;
   }
+  display: ${(props) => (props.isInput ? 'block' : 'none')}
 `;
 
 const ErrorMessage = styled.p`
