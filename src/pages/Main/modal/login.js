@@ -74,7 +74,7 @@ const LoginModal = (props) => {
                 <img src={lock} alt="이미지" />
               </LockLogoBox>
               <LoginBtnContainer>
-                <LoginBtns onClick={onLogin}>로그인</LoginBtns>
+                <LoginBtns onClick={onLogin} isInput={isInput}>로그인</LoginBtns>
               </LoginBtnContainer>
             </LoginForm>
           </main>
@@ -121,6 +121,7 @@ const LoginBtns = styled.button`
     border: 1px solid black;
     color: black;
   }
+  display: ${(props) => (props.isInput ? 'block' : 'none')}
 `;
 
 const LoginForm = styled.form`
