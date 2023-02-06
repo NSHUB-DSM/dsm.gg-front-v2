@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useState } from "react";
+import search from '../../assets/imgs/search.png';
 
 export default function Search() {
   const [value, setValue] = useState("");
@@ -23,23 +24,16 @@ export default function Search() {
           value={value}
           onChange={onChange}
         />
-        {isInput && <SearchBtn>검색하기</SearchBtn>}
+        {isInput && <SearchBtn src={search} alt="검색하기"/>}
       </InputContainer>
     </>
   );
 }
 
-const SearchBtn = styled.p`
-  font-size: 15px;
-  color: black;
-  font-weight: 550;
-  text-align: right;
-  margin-top: 5px;
-  cursor: pointer;
-  transition: opacity 0.5s ease-in-out;
-  &:hover {
-    opacity: 0.7;
-  }
+
+const SearchBtn = styled.img`
+  width: 30px;
+  float: right;
 `;
 
 const InputContainer = styled.div`
