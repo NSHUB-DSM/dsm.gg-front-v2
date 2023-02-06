@@ -15,7 +15,9 @@ const LoginModal = (props) => {
   const [isInput, setIsInput] = useState(false);
   const navigate = useNavigate();
 
-  const onLogin = () => {
+  const onLogin = (e) => {
+    setEmail("");
+    setPassword("");
     fetch("", {
       method: "POST",
       body: JSON.stringify({
@@ -148,6 +150,7 @@ const PasswordInput = styled.input`
   &:focus {
     border-bottom: 1px solid black;
   }
+
 `;
 
 const EmailLogoBox = styled.div`
