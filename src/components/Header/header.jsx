@@ -87,12 +87,14 @@ const LoginBtn = styled.button`
 const Item = styled.li`
   padding: 8px 28px;
   font-size: 20px;
+  margin-left: 30px;
 `;
 
 const ItemList = styled.ul`
   display: flex;
   list-style: none;
   padding-left: 0;
+  margin-right: 30px;
 
   @media screen and (max-width: 600px) {
     flex-direction: column;
