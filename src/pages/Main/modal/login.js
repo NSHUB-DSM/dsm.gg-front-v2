@@ -32,6 +32,14 @@ const LoginModal = (props) => {
     });
   };
 
+  const inputHandler = (e) => {
+    if (e.target.value === "") {
+      setIsInput(false);
+    } else {
+      setIsInput(true);
+    }
+  }
+
   return (
     <div className={open ? "openModal modal" : "modal"}>
       {open ? (
@@ -45,7 +53,7 @@ const LoginModal = (props) => {
           <main>
             <Title>로그인</Title>
             <br />
-            <LoginForm>
+            <LoginForm onChange={inputHandler}>
               <InputEmail
                 placeholder="이메일을 입력해주세요."
                 type="email"
