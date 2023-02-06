@@ -17,6 +17,7 @@ export default function SignupInput() {
   const [passwordError, setPasswordError] = useState(false);
   const [confirmPasswordError, setConfirmPasswordError] = useState(false);
   const [usernameError, setUsernameError] = useState(false);
+  const [isInput, setIsInput] = useState(false);
   const navigate = useNavigate();
 
   const onEmailCheck = (e) => {
@@ -102,9 +103,17 @@ export default function SignupInput() {
       });
   };
 
+  const onChange = (e) => {
+    if (e.target.value === '') {
+      setIsInput(false);
+    } else {
+      setIsInput(true);
+    }
+  }
+
   return (
     <>
-      <InputContainer>
+      <InputContainer onChange={onChange}>
         <EamilInput
           type="email"
           placeholder="이메일을 입력하세요."
