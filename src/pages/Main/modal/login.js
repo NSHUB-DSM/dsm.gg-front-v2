@@ -12,6 +12,7 @@ const LoginModal = (props) => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isInput, setIsInput] = useState(false);
   const navigate = useNavigate();
 
   const onLogin = () => {
