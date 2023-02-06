@@ -33,7 +33,7 @@ const LoginModal = (props) => {
   };
 
   const inputHandler = (e) => {
-    if (e.target.value === "") {
+    if (email === "" && password === "") {
       setIsInput(false);
     } else {
       setIsInput(true);
