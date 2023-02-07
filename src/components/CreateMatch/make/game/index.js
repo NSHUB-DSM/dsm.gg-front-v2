@@ -82,18 +82,18 @@ const SelectOptions = () => {
 
 export default SelectOptions;
 
-const NoneSelect = styled.p`
+export const NoneSelect = styled.p`
   font-size: 18px;
   text-align: center;
   color: blue;
   font-weight: 550;
 `
 
-const BottomSpace = styled.div`
+export const BottomSpace = styled.div`
   height: 100px;
 `
 
-const NextBtn = styled.p`
+export const NextBtn = styled.p`
   font-size: 20px;
   font-weight: 600;
   color: #2F96F0;
@@ -105,30 +105,30 @@ const NextBtn = styled.p`
 `
 
 
-const Description = styled.p`
+export const Description = styled.p`
   font-size: 18px;
   text-align: center;
 `;
 
-const Space = styled.div`
+export const Space = styled.div`
   height: 180px;
 `;
 
-const Title = styled.p`
+export const Title = styled.p`
   font-size: 40px;
   font-weight: 600;
   text-align: center;
 `;
 
-const MiddleSpace = styled.div`
+export const MiddleSpace = styled.div`
   height: 40px;
 `;
 
-const TopSpace = styled.div`
+export const TopSpace = styled.div`
   height: 100px;
 `;
 
-const GameChoice = styled.select`
+export const GameChoice = styled.select`
   width: 200px;
   height: 60px;
   background-color: #f8f8f8;
@@ -142,7 +142,7 @@ const GameChoice = styled.select`
   font-size: 20px;
 `;
 
-const OptionsContainer = styled.div`
+export const OptionsContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
 `;
