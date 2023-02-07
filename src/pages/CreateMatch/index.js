@@ -60,7 +60,7 @@ const easeIn = keyframes`
 `
 
 const TopSpace = styled.div`
-  height: 250px;
+  height: 440px;
 `
 
 const Title = styled.p`
