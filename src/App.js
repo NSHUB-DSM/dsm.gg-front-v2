@@ -7,7 +7,7 @@ import SearchPage from "./pages/Search";
 import SignupPage from './pages/Signup';
 import Community from './pages/Community';
 import CreateMatch from "./pages/CreateMatch";
-import Make from "./pages/CreateMatch/make";
+import Make from "./pages/CreateMatch/make/game";
 import Matching from "./pages/Matching";
 
 const App = () => {
