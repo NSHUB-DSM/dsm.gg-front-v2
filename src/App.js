@@ -20,7 +20,7 @@ const App = () => {
           <Route path="/user/signup" element={<SignupPage />}></Route>
           <Route path="/community" element={<Community />}></Route>
           <Route path="/match" element={<CreateMatch />}></Route>
-          <Route path="/match/create" element={<Make />}></Route>
+          <Route path="/match/create/game" element={<Make />}></Route>
           <Route path="/matching" element={<Matching />}></Route>
         </Routes>
       </BrowserRouter>
