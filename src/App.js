@@ -10,6 +10,7 @@ import CreateMatch from "./pages/CreateMatch";
 import GameMake from "./pages/CreateMatch/make/game";
 import Matching from "./pages/Matching";
 import TierLimit from "./pages/CreateMatch/make/tier";
+import NotFound from "./notfound";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainPage />}></Route>
+          <Route path="/*" element={<NotFound />}></Route>
           <Route path="/search" element={<SearchPage />}></Route>
           <Route path="/user/signup" element={<SignupPage />}></Route>
           <Route path="/community" element={<Community />}></Route>
