@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../../../components/Header/header";
-import SelectOption from "../../../components/CreateMatch/make";
+import SelectOptions from "../../../components/CreateMatch/make/game";
 import useTitle from "../../../components/Title/hook";
 
 export default function Make() {
@@ -10,7 +10,7 @@ export default function Make() {
     return (
         <>
             <Header />
-            <SelectOption />
+            <SelectOptions />
         </>
     )
 }
