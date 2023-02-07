@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "../../../components/Header/header";
-import SelectOptions from "../../../components/CreateMatch/make/game";
-import useTitle from "../../../components/Title/hook";
+import Header from "../../../../components/Header/header";
+import SelectOptions from "../../../../components/CreateMatch/make/game";
+import useTitle from "../../../../components/Title/hook";
 
 export default function Make() {
     const titleUpdater = useTitle("불러오는 중...");
