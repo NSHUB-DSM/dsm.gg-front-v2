@@ -17,7 +17,7 @@ export default function CreateMatch() {
       </div>
       <BottomSpace />
       <BtnContainer {...animationItem}>
-        <CreateBtn onClick={() => navigate("/match/create")}>만들기</CreateBtn>
+        <CreateBtn onClick={() => navigate("/match/create/game")}>만들기</CreateBtn>
       </BtnContainer>
     </>
   );
