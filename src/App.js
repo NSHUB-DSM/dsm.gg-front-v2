@@ -7,7 +7,7 @@ import SearchPage from "./pages/Search";
 import SignupPage from './pages/Signup';
 import Community from './pages/Community';
 import CreateMatch from "./pages/CreateMatch";
-import Make from "./pages/CreateMatch/make/game";
+import GameMake from "./pages/CreateMatch/make/game";
 import Matching from "./pages/Matching";
 
 const App = () => {
@@ -20,7 +20,7 @@ const App = () => {
           <Route path="/user/signup" element={<SignupPage />}></Route>
           <Route path="/community" element={<Community />}></Route>
           <Route path="/match" element={<CreateMatch />}></Route>
-          <Route path="/match/create/game" element={<Make />}></Route>
+          <Route path="/match/create/game" element={<GameMake />}></Route>
           <Route path="/matching" element={<Matching />}></Route>
         </Routes>
       </BrowserRouter>
