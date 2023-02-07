@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const SelectOptions = () => {
   const gameList = [
@@ -44,11 +44,17 @@ const SelectOptions = () => {
 
   const [game, setGame] = useState("");
   const [isSelect, setIsSelect] = useState(false);
+  const navigate = useNavigate();
 
   const onChange = (e) => {
     setGame(e.target.value);
     setIsSelect(true);
   };
+
+  const onClick = () => {
+    alert(`${game}이 선택되었습니다.`)
+    navigate("/match/create/tier")
+  }
 
   return (
     <>
@@ -65,28 +71,39 @@ const SelectOptions = () => {
             ))}
           </GameChoice>
           <MiddleSpace />
-          <Description>{game} 선택됨</Description>
+          {isSelect ? <Description>{game} 선택됨</Description> : <NoneSelect>게임 종류를 선택해주세요!</NoneSelect>}
         </div>
       </OptionsContainer>
-      {isSelect && (
-        <p style={{ textAlign: 'center' }}>
-          <LinkStyle to="/match/create/tier">
-            다음 단계로 넘어가기 &gt;
-          </LinkStyle>
-        </p>
-      )}
+      <BottomSpace />
+      {isSelect && <NextBtn onClick={onClick}>다음 단계로 넘어가기 &gt;</NextBtn>}
     </>
   );
 };
 
 export default SelectOptions;
 
-const LinkStyle = styled(Link)`
+const NoneSelect = styled.p`
+  font-size: 18px;
+  text-align: center;
+  color: blue;
+  font-weight: 550;
+`
+
+const BottomSpace = styled.div`
+  height: 100px;
+`
+
+const NextBtn = styled.p`
   font-size: 20px;
   font-weight: 600;
-  color: #2f96f0;
-  text-decoration: none;
-`;
+  color: #2F96F0;
+  text-align: center;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.7;
+  }
+`
+
 
 const Description = styled.p`
   font-size: 18px;
