@@ -9,6 +9,7 @@ import Community from './pages/Community';
 import CreateMatch from "./pages/CreateMatch";
 import GameMake from "./pages/CreateMatch/make/game";
 import Matching from "./pages/Matching";
+import TierLimit from "./pages/CreateMatch/make/tier";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/match" element={<CreateMatch />}></Route>
           <Route path="/match/create/game" element={<GameMake />}></Route>
           <Route path="/matching" element={<Matching />}></Route>
+          <Route path="/match/create/tier" element={<TierLimit />}></Route>
         </Routes>
       </BrowserRouter>
     </StyleProvider>
