@@ -39,80 +39,15 @@ const SelectOptions = () => {
     },
   ];
 
-  const tierList = [
-    {
-      id: 0,
-      tier: "아이언",
-    },
-    {
-      id: 1,
-      tier: "브론즈",
-    },
-    {
-      id: 2,
-      tier: "실버",
-    },
-    {
-      id: 3,
-      tier: "골드",
-    },
-    {
-      id: 4,
-      tier: "플래티넘",
-    },
-    {
-      id: 5,
-      tier: "다이아몬드",
-    },
-    {
-      id: 6,
-      tier: "마스터",
-    },
-    {
-      id: 7,
-      tier: "그랜드마스터",
-    },
-    {
-      id: 8,
-      tier: "챌린저",
-    },
-  ];
-
-  const peopleNumber = [
-    {
-      id: 0,
-      number: 1,
-    },
-    {
-      id: 1,
-      number: 2,
-    },
-    {
-      id: 2,
-      number: 3,
-    },
-    {
-      id: 3,
-      number: 4,
-    },
-    {
-      id: 4,
-      number: 5,
-    },
-  ];
-
-  
-
   const [game, setGame] = useState("");
-  const [tier, setTier] = useState("");
-  const [people, setPeople] = useState(0);
 
   return (
     <>
       <TopSpace />
+      <Title>게임 종류 선택</Title>
+      <Space />
       <OptionsContainer>
         <div>
-          <GameTitle>게임 선택</GameTitle>
           <GameChoice onChange={(e) => setGame(e.target.value)} value={game}>
             {gameList.map((item) => (
               <option value={item.name} key={item.id}>
@@ -133,6 +68,16 @@ const SelectOptions = () => {
 };
 
 export default SelectOptions;
+
+const Space = styled.div`
+  height: 180px;
+`
+
+const Title = styled.p`
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+`
 
 
 const MiddleSpace = styled.div`
@@ -161,26 +106,22 @@ const BottomSpace = styled.div`
 `;
 
 const TopSpace = styled.div`
-  height: 280px;
+  height: 100px;
 `;
 
-
-const GameTitle = styled.p`
-  font-size: 30px;
-  font-weight: 600;
-`;
 
 const GameChoice = styled.select`
-  width: 145px;
-  height: 40px;
+  width: 200px;
+  height: 60px;
   background-color: #f8f8f8;
   border: 0.5px solid #808B96;
   box-shadow: rgb(0 0 0 / 5%) 0px 0px 4px;
   margin-top: 21px;
-  font-weight: 500;
+  font-weight: 560;
   margin-right: 5px;
   padding-left: 10px;
   border-radius: 5px;
+  font-size: 20px;
 `;
 
 const OptionsContainer = styled.div`
