@@ -13,7 +13,6 @@ export default function CreateMatch() {
 
   return (
     <>
-      <Header />
       <TopSpace />
       <div>
         <Title>매칭을 만들어 소통해보세요!</Title>
