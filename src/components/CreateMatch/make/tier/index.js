@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
+import { TopSpace } from '../game';
 
 const TierOptions = () => {
     const tierList = [
@@ -45,4 +45,16 @@ const TierOptions = () => {
             name: '챌린저'
         }
     ]
+
+    const [tier, setTier] = useState("");
+    const [isSelect, setIsSelect] = useState(false);
+    const navigate = useNavigate();
+
+    return (
+        <>
+          <TopSpace />
+        </>
+    )
 }
+
+export default TierOptions;
