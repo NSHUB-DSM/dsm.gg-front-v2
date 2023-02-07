@@ -1,45 +1,48 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import useScrollFadeIn from "../../../../pages/Main/hooks";
 
 const SelectOptions = () => {
-  const animationItem = useScrollFadeIn();
   const gameList = [
     {
       id: 0,
-      name: "일반 게임",
+      name: "선택하기"
     },
     {
       id: 1,
-      name: "개인/2인 랭크 게임",
+      name: "일반 게임",
     },
     {
       id: 2,
-      name: "자유 랭크 게임",
+      name: "개인/2인 랭크 게임",
     },
     {
       id: 3,
-      name: "칼바람 나락",
+      name: "자유 랭크 게임",
     },
     {
       id: 4,
-      name: "롤토체스",
+      name: "칼바람 나락",
     },
     {
       id: 5,
-      name: "우르프",
+      name: "롤토체스",
     },
     {
       id: 6,
-      name: "단일 챔피언",
+      name: "우르프",
     },
     {
       id: 7,
+      name: "단일 챔피언",
+    },
+    {
+      id: 8,
       name: "궁극기 주문서",
     },
   ];
 
   const [game, setGame] = useState("");
+  const [isSelect, setIsSelect] = useState(false);
 
   return (
     <>
@@ -56,18 +59,19 @@ const SelectOptions = () => {
             ))}
           </GameChoice>
           <MiddleSpace />
-          {game} 선택됨
+          <Description>{game} 선택됨</Description>
         </div>
       </OptionsContainer>
-      <BottomSpace />
-      <BtnContainer {...animationItem}>
-        <MakeBtn>완료</MakeBtn>
-      </BtnContainer>
     </>
   );
 };
 
 export default SelectOptions;
+
+const Description = styled.p`
+  font-size: 18px;
+  text-align: center;
+`
 
 const Space = styled.div`
   height: 180px;
@@ -82,27 +86,6 @@ const Title = styled.p`
 
 const MiddleSpace = styled.div`
   height: 40px;
-`;
-
-const BtnContainer = styled.div`
-  width: 160px;
-  height: 60px;
-  margin: 0 auto;
-`;
-
-const MakeBtn = styled.button`
-  width: 160px;
-  height: 60px;
-  font-size: 20px;
-  background-color: black;
-  color: white;
-  border-radius: 25px;
-  margin-top: -100px;
-  cursor: pointer;
-`;
-
-const BottomSpace = styled.div`
-  height: 500px;
 `;
 
 const TopSpace = styled.div`
