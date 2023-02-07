@@ -16,31 +16,10 @@ export default function CreateMatch() {
         <Title>매칭을 만들어 소통해보세요!</Title>
       </div>
       <BottomSpace />
-      <BtnContainer {...animationItem}>
-        <CreateBtn onClick={() => navigate("/match/create/game")}>만들기</CreateBtn>
-      </BtnContainer>
     </>
   );
 }
 
-
-const BtnContainer = styled.div`
-  width: 160px;
-  height: 60px;
-  margin: 0 auto;
-`
-
-const CreateBtn = styled.button`
-  width: 160px;
-  height: 60px;
-  background-color: black;
-  color: white;
-  font-size: 18px;
-  font-weight: 600;
-  border-radius: 25px;
-  margin-top: -100px;
-  cursor: pointer;
-`
 
 const BottomSpace = styled.div`
   height: 500px;
