@@ -61,6 +61,8 @@ const PeopleOptions = () => {
                     </option>
                 ))}
             </GameChoice>
+            <MiddleSpace />
+            {isSelect ? <Description>{people}명 선택됨</Description> : <NoneSelect>총 인원을 선택해주세요!</NoneSelect>}
         </div>
       </OptionsContainer>
     </>
