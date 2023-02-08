@@ -41,18 +41,34 @@ export default function CreateMatch() {
         </BoxContainer>
       </Box>
       <SecondBox>
-        <BoxContainer>
+        <SecondBoxContainer isScroll={scrollPosition}>
           <LogoContainer>
             <LogoStyle src={tier} alt="티어" />
           </LogoContainer>
           <TextContainer>
             <BoxTitle>티어를 제한해 재미를 극대화 해보세요!</BoxTitle>
+            <SecondDescription>
+              자신과 비슷한 티어에 속한 사람들과 함께 즐겨보세요
+            </SecondDescription>
           </TextContainer>
-        </BoxContainer>
+        </SecondBoxContainer>
       </SecondBox>
     </>
   );
 }
+
+const SecondDescription = styled.p`
+  font-size: 20px;
+  width: 380px;
+  height: 97.5px;
+`
+
+const SecondBoxContainer = styled.div`
+  display: flex;
+  padding: 120px 40px 120px 40px;
+  margin: 0 auto;
+  animation: ${(props) => (props.isScroll > 150 ? easeIn : 0)} 2s;
+`
 
 const SecondBox = styled.div`
   width: 100%;
@@ -80,7 +96,7 @@ const BoxContainer = styled.div`
   display: flex;
   padding: 120px 40px 120px 40px;
   margin: 0 auto;
-  animation: ${(props) => (props.isScroll > 100 ? easeIn : 0)} 1s;
+  animation: ${(props) => (props.isScroll > 100 ? easeIn : 0)} 2s;
 `
 
 
