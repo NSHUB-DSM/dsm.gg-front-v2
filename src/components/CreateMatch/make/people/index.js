@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
+import { TopSpace, Title } from '../game';
 
 const PeopleOptions = () => {
     const peopleList = [
@@ -32,7 +33,8 @@ const PeopleOptions = () => {
 
     return (
         <>
-          
+          <TopSpace />
+          <Title>인원 선택</Title>
         </>
     )
 }
