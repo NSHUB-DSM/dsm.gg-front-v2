@@ -17,27 +17,58 @@ export default function CreateMatch() {
       </div>
       <BottomSpace />
       <FirstBox {...animationItem}>
-
+        <FirstBoxContainer>
+          <LogoContainer>
+            <LogoStyle src={logo} alt="이미지 " />
+          </LogoContainer>
+          <TextContainer>
+            <BoxTitle>원하는 게임을 선택하고 만들어서 소통해보세요!</BoxTitle>
+            <FisrtDescription>
+              개인/2인 랭크게임, 우르프, 칼바람 나락 등 인기있는 게임들을 즐겨보세요!
+            </FisrtDescription>
+          </TextContainer>
+        </FirstBoxContainer>
       </FirstBox>
     </>
   );
 }
 
+const FisrtDescription = styled.p`
+  font-size: 20px;
+  width: 380px;
+  height: 97.5px;
+  margin-top: 30px;
+`
+
+
+const TextContainer = styled.div`
+  display: flex;
+  float: right;
+  flex-direction: column;
+  margin-left: 200px;
+`
+
+const FirstBoxContainer = styled.div`
+  display: flex;
+  padding: 120px 40px 120px 40px;
+  margin: 0 auto;
+`
+
 
 const BoxTitle = styled.p`
-  font-size: 56px;
+  font-size: 48px;
   font-weight: 600;
-  text-align: center;
-  margin-top: 30px;
+  width: 380px;
+  height: 172.78px;
 `
 
 const LogoStyle = styled.img``;
 
 const LogoContainer = styled.div`
-  padding: 100px;
 `;
 
 const FirstBox = styled.div`
+  width: 100%;
   height: 600px;
   display: flex;
   background-color: #f7f7f7;
