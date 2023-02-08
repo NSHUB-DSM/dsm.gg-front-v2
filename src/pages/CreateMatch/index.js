@@ -16,7 +16,7 @@ export default function CreateMatch() {
         <Title>매칭을 만들어 소통해보세요!</Title>
       </div>
       <BottomSpace />
-      <FirstBox {...animationItem}>
+      <Box {...animationItem}>
         <BoxContainer>
           <LogoContainer>
             <LogoStyle src={logo} alt="이미지 " />
@@ -28,7 +28,7 @@ export default function CreateMatch() {
             </FisrtDescription>
           </TextContainer>
         </BoxContainer>
-      </FirstBox>
+      </Box>
     </>
   );
 }
@@ -67,7 +67,7 @@ const LogoStyle = styled.img``;
 const LogoContainer = styled.div`
 `;
 
-const FirstBox = styled.div`
+const Box = styled.div`
   width: 100%;
   height: 600px;
   display: flex;
