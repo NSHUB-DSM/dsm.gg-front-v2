@@ -2,11 +2,23 @@ import styled, { keyframes } from "styled-components";
 import useScrollFadeIn from "../Main/hooks";
 import useTitle from "../../components/Title/hook";
 import logo from "../../assets/imgs/create_logo.jpeg";
+import tier from '../../assets/imgs/tier.png';
+import { useEffect, useState } from "react";
 
 export default function CreateMatch() {
+  const [scrollPosition, setScrollPosition] = useState(0);
+
   const animationItem = useScrollFadeIn();
   const titleUpdater = useTitle("불러오는 중...");
   setTimeout(() => titleUpdater("매칭 생성 | DSM.GG"));
+
+  const updateScroll = () => {
+    setScrollPosition(window.scrollY || document.documentElement.scrollTop)
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', updateScroll)
+  }, []);
 
   return (
     <>
@@ -15,8 +27,8 @@ export default function CreateMatch() {
         <Title>매칭을 만들어 소통해보세요!</Title>
       </div>
       <BottomSpace />
-      <Box {...animationItem}>
-        <BoxContainer>
+      <Box>
+        <BoxContainer isScroll={scrollPosition}>
           <LogoContainer>
             <LogoStyle src={logo} alt="이미지 " />
           </LogoContainer>
@@ -28,9 +40,14 @@ export default function CreateMatch() {
           </TextContainer>
         </BoxContainer>
       </Box>
-      <SecondBox {...animationItem}>
+      <SecondBox>
         <BoxContainer>
-
+          <LogoContainer>
+            <LogoStyle src={tier} alt="티어" />
+          </LogoContainer>
+          <TextContainer>
+            <BoxTitle>티어를 제한해 재미를 극대화 해보세요!</BoxTitle>
+          </TextContainer>
         </BoxContainer>
       </SecondBox>
     </>
@@ -63,6 +80,7 @@ const BoxContainer = styled.div`
   display: flex;
   padding: 120px 40px 120px 40px;
   margin: 0 auto;
+  animation: ${(props) => (props.isScroll > 100 ? easeIn : 0)} 1s;
 `
 
 
