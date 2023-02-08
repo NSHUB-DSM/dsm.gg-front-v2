@@ -29,8 +29,8 @@ export default function CreateMatch() {
           </TextContainer>
         </BoxContainer>
       </Box>
-      <SecondBox>
-        
+      <SecondBox {...animationItem}>
+
       </SecondBox>
     </>
   );
