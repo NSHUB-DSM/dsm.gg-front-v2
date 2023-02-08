@@ -1,7 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import useScrollFadeIn from "../Main/hooks";
 import useTitle from "../../components/Title/hook";
-import { useNavigate } from "react-router-dom";
 import logo from "../../assets/imgs/create_logo.jpeg";
 
 export default function CreateMatch() {
@@ -30,7 +29,9 @@ export default function CreateMatch() {
         </BoxContainer>
       </Box>
       <SecondBox {...animationItem}>
+        <BoxContainer>
 
+        </BoxContainer>
       </SecondBox>
     </>
   );
