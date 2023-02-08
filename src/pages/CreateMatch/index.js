@@ -23,9 +23,9 @@ export default function CreateMatch() {
           </LogoContainer>
           <TextContainer>
             <BoxTitle>원하는 게임을 선택하고 만들어서 소통해보세요!</BoxTitle>
-            <FisrtDescription>
+            <Description>
               개인/2인 랭크게임, 우르프, 칼바람 나락 등 인기있는 게임들을 즐겨보세요!
-            </FisrtDescription>
+            </Description>
           </TextContainer>
         </BoxContainer>
       </Box>
@@ -33,7 +33,7 @@ export default function CreateMatch() {
   );
 }
 
-const FisrtDescription = styled.p`
+const Description = styled.p`
   font-size: 20px;
   width: 380px;
   height: 97.5px;
