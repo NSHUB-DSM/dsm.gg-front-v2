@@ -52,7 +52,7 @@ const SelectOptions = () => {
   };
 
   const onClick = () => {
-    alert(`${game}이 선택되었습니다.`)
+    alert(`${game}이(가) 선택되었습니다.`)
     navigate("/match/create/tier")
   }
 
