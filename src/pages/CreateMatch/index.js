@@ -4,6 +4,7 @@ import useTitle from "../../components/Title/hook";
 import logo from "../../assets/imgs/create_logo.jpeg";
 import tier from '../../assets/imgs/tier.png';
 import { useEffect, useState } from "react";
+import people from '../../assets/imgs/people.jpeg';
 
 export default function CreateMatch() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -53,9 +54,36 @@ export default function CreateMatch() {
           </TextContainer>
         </SecondBoxContainer>
       </SecondBox>
+      <ThirdBox>
+        <ThirdBoxContainer isScroll={scrollPosition}>
+          <LogoContainer>
+            <LogoStyle src={people} alt="이미지" />
+          </LogoContainer>
+          <TextContainer>
+            <BoxTitle>인원을 지정해 사람들을 늘려보세요!</BoxTitle>
+            <SecondDescription>
+              친구들과도 가족들과도 여럿이 누려보세요!
+            </SecondDescription>
+          </TextContainer>
+        </ThirdBoxContainer>
+      </ThirdBox>
     </>
   );
 }
+
+const ThirdBox = styled.div`
+   width: 100%;
+  height: 600px;
+  display: flex;
+  background-color: #F7F7F7;
+`
+
+const ThirdBoxContainer = styled.div`
+  display: flex;
+  padding: 120px 40px 120px 40px;
+  margin: 0 auto;
+  animation: ${(props) => (props.isScroll > 150 ? easeIn : 0)} 2s;
+`
 
 const SecondDescription = styled.p`
   font-size: 20px;
