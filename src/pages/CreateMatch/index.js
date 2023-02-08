@@ -85,6 +85,12 @@ const MoveBtn = styled.button`
   background-color: black;
   color: white;
   cursor: pointer;
+  transition: background-color 0.5s ease-in-out;
+  &:hover {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+  }
 `
 
 const BtnContainer = styled.div`
