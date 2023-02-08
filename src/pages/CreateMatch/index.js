@@ -2,9 +2,10 @@ import styled, { keyframes } from "styled-components";
 import useScrollFadeIn from "../Main/hooks";
 import useTitle from "../../components/Title/hook";
 import logo from "../../assets/imgs/create_logo.jpeg";
-import tier from '../../assets/imgs/tier.png';
+import tier from "../../assets/imgs/tier.png";
 import { useEffect, useState } from "react";
-import people from '../../assets/imgs/people.jpeg';
+import people from "../../assets/imgs/people.jpeg";
+import { useNavigate } from "react-router-dom";
 
 export default function CreateMatch() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -12,13 +13,14 @@ export default function CreateMatch() {
   const animationItem = useScrollFadeIn();
   const titleUpdater = useTitle("불러오는 중...");
   setTimeout(() => titleUpdater("매칭 생성 | DSM.GG"));
+  const navigate = useNavigate();
 
   const updateScroll = () => {
-    setScrollPosition(window.scrollY || document.documentElement.scrollTop)
+    setScrollPosition(window.scrollY || document.documentElement.scrollTop);
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', updateScroll)
+    window.addEventListener("scroll", updateScroll);
   }, []);
 
   return (
@@ -36,7 +38,8 @@ export default function CreateMatch() {
           <TextContainer>
             <BoxTitle>원하는 게임을 선택하고 만들어서 소통해보세요!</BoxTitle>
             <Description>
-              개인/2인 랭크게임, 우르프, 칼바람 나락 등 인기있는 게임들을 즐겨보세요!
+              개인/2인 랭크게임, 우르프, 칼바람 나락 등 인기있는 게임들을
+              즐겨보세요!
             </Description>
           </TextContainer>
         </BoxContainer>
@@ -70,7 +73,9 @@ export default function CreateMatch() {
       <BottomSpace>
         <Start>이제 시작해볼까요?</Start>
         <BtnContainer>
-          <MoveBtn>게임 생성하기</MoveBtn>
+          <MoveBtn onClick={() => navigate("/match/create/game")}>
+            게임 생성하기
+          </MoveBtn>
         </BtnContainer>
       </BottomSpace>
     </>
@@ -91,96 +96,93 @@ const MoveBtn = styled.button`
     border: 1px solid black;
     color: black;
   }
-`
+`;
 
 const BtnContainer = styled.div`
   width: 224.23px;
   height: 65px;
   margin: 0 auto;
   margin-top: 50px;
-`
+`;
 
 const Start = styled.p`
   font-size: 35px;
   font-weight: 700;
   text-align: center;
   margin-top: 50px;
-`
+`;
 
 const ThirdBox = styled.div`
-   width: 100%;
+  width: 100%;
   height: 600px;
   display: flex;
-  background-color: #F7F7F7;
-`
+  background-color: #f7f7f7;
+`;
 
 const ThirdBoxContainer = styled.div`
   display: flex;
   padding: 120px 40px 120px 40px;
   margin: 0 auto;
   animation: ${(props) => (props.isScroll > 500 ? easeIn : 0)} 2s;
-`
+`;
 
 const SecondDescription = styled.p`
   font-size: 20px;
   width: 380px;
   height: 97.5px;
-`
+`;
 
 const SecondBoxContainer = styled.div`
   display: flex;
   padding: 120px 40px 120px 40px;
   margin: 0 auto;
   animation: ${(props) => (props.isScroll > 300 ? easeIn : 0)} 2s;
-`
+`;
 
 const SecondBox = styled.div`
   width: 100%;
   height: 600px;
   display: flex;
   background-color: white;
-`
+`;
 
 const Description = styled.p`
   font-size: 20px;
   width: 380px;
   height: 97.5px;
   margin-top: 30px;
-`
-
+`;
 
 const TextContainer = styled.div`
   display: flex;
   float: right;
   flex-direction: column;
   margin-left: 200px;
-`
+`;
 
 const BoxContainer = styled.div`
   display: flex;
   padding: 120px 40px 120px 40px;
   margin: 0 auto;
   animation: ${(props) => (props.isScroll > 100 ? easeIn : 0)} 2s;
-`
-
+`;
 
 const BoxTitle = styled.p`
   font-size: 48px;
   font-weight: 800;
   width: 380px;
   height: 172.78px;
-`
+`;
 
 const LogoStyle = styled.img``;
 
-const LogoContainer = styled.div`
-`;
+const LogoContainer = styled.div``;
 
 const Box = styled.div`
   width: 100%;
   height: 600px;
   display: flex;
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
 `;
 
 const BottomSpace = styled.div`
