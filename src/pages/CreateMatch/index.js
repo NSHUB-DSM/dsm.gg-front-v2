@@ -84,6 +84,7 @@ const MoveBtn = styled.button`
   border-radius: 15px;
   background-color: black;
   color: white;
+  cursor: pointer;
 `
 
 const BtnContainer = styled.div`
