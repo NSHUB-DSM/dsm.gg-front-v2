@@ -8,7 +8,6 @@ export default function CreateMatch() {
   const animationItem = useScrollFadeIn();
   const titleUpdater = useTitle("불러오는 중...");
   setTimeout(() => titleUpdater("매칭 생성 | DSM.GG"));
-  const navigate = useNavigate();
 
   return (
     <>
@@ -18,7 +17,7 @@ export default function CreateMatch() {
       </div>
       <BottomSpace />
       <FirstBox {...animationItem}>
-        
+
       </FirstBox>
     </>
   );
