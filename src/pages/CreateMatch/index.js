@@ -29,9 +29,19 @@ export default function CreateMatch() {
           </TextContainer>
         </BoxContainer>
       </Box>
+      <SecondBox>
+        
+      </SecondBox>
     </>
   );
 }
+
+const SecondBox = styled.div`
+  width: 100%;
+  height: 600px;
+  display: flex;
+  background-color: white;
+`
 
 const Description = styled.p`
   font-size: 20px;
