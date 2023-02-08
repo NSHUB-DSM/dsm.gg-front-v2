@@ -71,7 +71,7 @@ const FirstBox = styled.div`
   width: 100%;
   height: 600px;
   display: flex;
-  background-color: #f7f7f7;
+  background-color: #F7F7F7;
 `;
 
 const BottomSpace = styled.div`
