@@ -11,6 +11,7 @@ import GameMake from "./pages/CreateMatch/make/game";
 import Matching from "./pages/Matching";
 import TierLimit from "./pages/CreateMatch/make/tier";
 import NotFound from "./notfound";
+import SelectPeople from "./pages/CreateMatch/make/people";
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="/match/create/game" element={<GameMake />}></Route>
           <Route path="/matching" element={<Matching />}></Route>
           <Route path="/match/create/tier" element={<TierLimit />}></Route>
+          <Route path="/match/create/people" element={<SelectPeople />}></Route>
         </Routes>
       </BrowserRouter>
     </StyleProvider>
