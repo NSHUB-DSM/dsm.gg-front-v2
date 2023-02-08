@@ -67,11 +67,19 @@ export default function CreateMatch() {
           </TextContainer>
         </ThirdBoxContainer>
       </ThirdBox>
-      <BottomSpace />
+      <BottomSpace>
+        <Start>이제 시작해볼까요?</Start>
+      </BottomSpace>
     </>
   );
 }
 
+const Start = styled.p`
+  font-size: 35px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 50px;
+`
 
 const ThirdBox = styled.div`
    width: 100%;
