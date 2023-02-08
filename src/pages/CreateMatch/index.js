@@ -82,7 +82,7 @@ const ThirdBoxContainer = styled.div`
   display: flex;
   padding: 120px 40px 120px 40px;
   margin: 0 auto;
-  animation: ${(props) => (props.isScroll > 150 ? easeIn : 0)} 2s;
+  animation: ${(props) => (props.isScroll > 500 ? easeIn : 0)} 2s;
 `
 
 const SecondDescription = styled.p`
@@ -95,7 +95,7 @@ const SecondBoxContainer = styled.div`
   display: flex;
   padding: 120px 40px 120px 40px;
   margin: 0 auto;
-  animation: ${(props) => (props.isScroll > 150 ? easeIn : 0)} 2s;
+  animation: ${(props) => (props.isScroll > 300 ? easeIn : 0)} 2s;
 `
 
 const SecondBox = styled.div`
