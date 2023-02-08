@@ -17,7 +17,7 @@ export default function CreateMatch() {
       </div>
       <BottomSpace />
       <FirstBox {...animationItem}>
-        <FirstBoxContainer>
+        <BoxContainer>
           <LogoContainer>
             <LogoStyle src={logo} alt="이미지 " />
           </LogoContainer>
@@ -27,7 +27,7 @@ export default function CreateMatch() {
               개인/2인 랭크게임, 우르프, 칼바람 나락 등 인기있는 게임들을 즐겨보세요!
             </FisrtDescription>
           </TextContainer>
-        </FirstBoxContainer>
+        </BoxContainer>
       </FirstBox>
     </>
   );
@@ -48,7 +48,7 @@ const TextContainer = styled.div`
   margin-left: 200px;
 `
 
-const FirstBoxContainer = styled.div`
+const BoxContainer = styled.div`
   display: flex;
   padding: 120px 40px 120px 40px;
   margin: 0 auto;
@@ -57,7 +57,7 @@ const FirstBoxContainer = styled.div`
 
 const BoxTitle = styled.p`
   font-size: 48px;
-  font-weight: 600;
+  font-weight: 800;
   width: 380px;
   height: 172.78px;
 `
