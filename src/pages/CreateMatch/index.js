@@ -69,10 +69,29 @@ export default function CreateMatch() {
       </ThirdBox>
       <BottomSpace>
         <Start>이제 시작해볼까요?</Start>
+        <BtnContainer>
+          <MoveBtn>게임 생성하기</MoveBtn>
+        </BtnContainer>
       </BottomSpace>
     </>
   );
 }
+
+const MoveBtn = styled.button`
+  width: 224.23px;
+  height: 65px;
+  font-size: 20px;
+  border-radius: 15px;
+  background-color: black;
+  color: white;
+`
+
+const BtnContainer = styled.div`
+  width: 224.23px;
+  height: 65px;
+  margin: 0 auto;
+  margin-top: 50px;
+`
 
 const Start = styled.p`
   font-size: 35px;
