@@ -98,5 +98,5 @@ const Title = styled.p`
   color: black;
   text-align: center;
   font-weight: 600;
-  animation: ${easeIn} 2s ease-in;
+  animation: ${easeIn} 1s ease-in;
 `;
