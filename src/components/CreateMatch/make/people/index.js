@@ -65,6 +65,7 @@ const PeopleOptions = () => {
             {isSelect ? <Description>{people}명 선택됨</Description> : <NoneSelect>총 인원을 선택해주세요!</NoneSelect>}
         </div>
       </OptionsContainer>
+      {isSelect && <NextBtn>게임 생성하기 &gt;</NextBtn>}
     </>
   );
 };
