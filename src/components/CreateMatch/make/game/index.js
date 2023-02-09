@@ -90,7 +90,7 @@ export const NoneSelect = styled.p`
 `
 
 export const BottomSpace = styled.div`
-  height: 100px;
+  height: 60px;
 `
 
 export const NextBtn = styled.p`
