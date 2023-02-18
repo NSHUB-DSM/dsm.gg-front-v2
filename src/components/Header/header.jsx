@@ -60,6 +60,10 @@ const Header = () => {
 };
 
 const MenuBar = styled.img`
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
 `;
 
 const LinkStyle = styled(Link)`
