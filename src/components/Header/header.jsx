@@ -5,6 +5,7 @@ import { ReactComponent as GameLogo } from "../../assets/svgs/gameLogo.svg";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import LoginModal from "../../pages/Main/modal/login";
+import menu from "../../assets/imgs/menu_bar.png";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -27,13 +28,13 @@ const Header = () => {
               <LinkStyle to="/search">홈</LinkStyle>
             </Item>
             <Item>
-                <LinkStyle to="/match">매칭 생성</LinkStyle>
+              <LinkStyle to="/match">매칭 생성</LinkStyle>
             </Item>
             <Item>
-                <LinkStyle to="/matching">매칭</LinkStyle>
+              <LinkStyle to="/matching">매칭</LinkStyle>
             </Item>
             <Item>
-                <LinkStyle to="/community">커뮤니티</LinkStyle>
+              <LinkStyle to="/community">커뮤니티</LinkStyle>
             </Item>
           </ItemList>
         </MenuContainer>
@@ -46,6 +47,7 @@ const Header = () => {
             로그인
           </LoginBtn>
         </LoginContainer>
+        <MenuBar src={menu} alt="메뉴 로고" />
       </HeaderContainer>
       <LoginModal
         open={modalOpen}
@@ -57,12 +59,15 @@ const Header = () => {
   );
 };
 
+const MenuBar = styled.img`
+`;
+
 const LinkStyle = styled(Link)`
   text-decoration: none;
   color: black;
   transition: color 0.5s ease-in-out;
   &:hover {
-    color: #B875E6;
+    color: #b875e6;
   }
 `;
 
@@ -82,6 +87,9 @@ const LoginBtn = styled.button`
     color: black;
   }
   margin-top: 5px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Item = styled.li`
@@ -96,9 +104,8 @@ const ItemList = styled.ul`
   padding-left: 0;
   margin-right: 30px;
   margin-top: 3px;
-
-  @media screen and (max-width: 600px) {
-    flex-direction: column;
+  @media screen and (max-width: 768px) {
+    display: none;
   }
 `;
 
